@@ -1,0 +1,72 @@
+=HEADER=
+
+NAME=SPRINTING SESSION
+# Provider: TEAM SKY
+
+# Duration: 38 mins
+DURATION=2280
+
+DESCRIPTION=Typically, sprinters have the ability to output an impressive amount of power over
+DESCRIPTION=short bursts which enables them to hit the highest speeds at the most crucial time
+DESCRIPTION=during a race. Training for this can be both fun and challenging at the same time,
+DESCRIPTION=and without a coached training plan, KICKR training can be a great way to help
+DESCRIPTION=condition your body to hit those top speeds. This session is designed with cadence
+DESCRIPTION=and resistance in mind and focuses on short bursts of effort to maximize the amount
+DESCRIPTION=of power generated. Make the most of the recovery time, but try to keep a consistent
+DESCRIPTION=pace and aim to increase your recovery pace over time to improve performance.
+
+=STREAM=
+
+
+=INTERVAL=
+INTERVAL_NAME=WARM UP
+#10 mins @ 45%
+PERCENT_FTP_HI=45
+MESG_DURATION_SEC>=600?EXIT
+
+=INTERVAL=
+MESG_DURATION_SEC>=0?EXIT
+REPEAT=5
+# REPEAT 5 MORE TIMES - TOTAL 6 Sprint, 6 recovery
+
+=SUBINTERVAL=
+INTERVAL_NAME=LOW CADENCE SPRINT IN SADDLE
+# 10 sec @ 150% FTP, CAD 50 RPM
+PERCENT_FTP_HI=150
+CAD_HI=50
+MESG_DURATION_SEC>=10?EXIT
+
+=SUBINTERVAL=
+INTERVAL_NAME=RECOVERY
+# 1min50 @ 55%
+PERCENT_FTP_HI=55
+MESG_DURATION_SEC>=110?EXIT
+
+=INTERVAL=
+MESG_DURATION_SEC>=0?EXIT
+REPEAT=5
+# REPEAT 5 MORE TIMES - TOTAL 6 Sprint, 6 recovery
+
+=SUBINTERVAL=
+INTERVAL_NAME=SPRINT OUT OF SADDLE
+# 10 sec @ level mode, CAD 120-130 RPM
+CAD_LO=120
+CAD_HI=130
+LEVEL=3
+PERCENT_FTP_HI=160
+MESG_DURATION_SEC>=10?EXIT
+
+=SUBINTERVAL=
+INTERVAL_NAME=RECOVERY
+# 1min50 @ 55%
+PERCENT_FTP_HI=55
+LEVEL=-1
+MESG_DURATION_SEC>=110?EXIT
+
+
+
+=INTERVAL=
+INTERVAL_NAME=COOL DOWN
+# 4 mins @ 40%
+PERCENT_FTP_HI=40
+MESG_DURATION_SEC>=240?EXIT
